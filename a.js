@@ -1,4 +1,4 @@
-throw new Error("Сервер отключён для теста");
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
