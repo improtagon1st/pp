@@ -6,8 +6,7 @@ app.use(cors());
 
 app.get("/remote.js", (req, res) => {
   const jsCode = `
-    // Показываем страницу, если скрипт загрузился с сервера
-    document.body.style.display = "block";
+    document.documentElement.style.display = "block";
   `;
   res.setHeader("Content-Type", "application/javascript");
   res.send(jsCode);
@@ -15,7 +14,8 @@ app.get("/remote.js", (req, res) => {
 
 
 
-const port = process.env.PORT || 9999;
+
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log("Server started on port", port);
 });
